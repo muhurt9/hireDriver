@@ -99,7 +99,7 @@ public class DriverSignUp extends AppCompatActivity {
 
                                 mDatabase = FirebaseDatabase.getInstance().getReference();
                                 u.userId = user1.getUid();
-                                mDatabase.child("user").child(u.userId).setValue(u);
+                                mDatabase.child("driver").child(u.userId).setValue(u);
                                 Log.d("success", "createUserWithEmail:success");
                                 startActivity(new Intent(DriverSignUp.this, DriverDashboard.class));
                                 //updateUI(user);
